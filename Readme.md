@@ -14,8 +14,8 @@ This event triggers the service call for
 requestElevator(int toFloor, Direction requestedDirection) in ElevatorControllerImpl.
 
 1. Checks whether any elevator is available in the requested floor.
-2. If there is no elevator available in requested floor, checks for the idle elevator.
-3. If all elevators are busy, checks for the elevator in the requested Direction and available in the closest floor
+2. Checks for the elevator in the requested Direction and available in the closest floor
+3. If there is no elevator available in requested floor/direction, checks for the idle elevator.
 4. If there is no elevator available satisfying the above condition, Thread will sleep for some time and above procedure will be repeated till it finds an elevator for serving the request.
 
 After receiving the Elevator using above condition, the floor is added to the target floor list. As Elevator can serve one or more targets at a time, List of target floor is being maintained.
@@ -57,17 +57,16 @@ https://github.com/vinayapkraj/Elevator-Simulation.git
 4. Application will be available in the http://localhost:8081/rest/v1/requestElevator/{Floor}/{Diretion}
 http://localhost:8081/rest/v1/requestInsideElevator/{ElevatorId}/{Floor}
 
-## Angular Application:
+5. The result of the application can be viewed in the logfile `myelevatorlogfile.log` 
+
+6. Integration test will stimulate 6 request and 6 elevator events and result of the same can be viewed in the above logfile
+
+## How to run Test Angular GUI
 
 1. Open Command prompt, go to the project downloaded location. (Elevator_UI)
 2. Run command 'npm install' and 'ng serve'
 3. Application will be available in 
 	http://localhost:4200
+4. GUI can only be used for triggering the events and the result can only be viewed in the logfile `myelevatorlogfile.log` 
 
 This is a sample application that can be used for testing the implemetned solution for 6 elevators and 10 floors.
-
-
-
-
-
-
