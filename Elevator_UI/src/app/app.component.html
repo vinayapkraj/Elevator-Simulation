@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Elevator Simulation
+  </h1>
+</div>
+<div style="text-align:left">
+  <h2>
+   Request Inside Elevator
+
+  </h2>
+</div>
+<div> Select Elevator:
+  <select [(ngModel)]="selElevator"  class="se_landing">
+  <option class="se_landing_drpdwn"  value={{e}} *ngFor="let e of noOfElevators">{{e}}</option>
+</select>
+
+
+Select Floor:
+  <select [(ngModel)]="selFloor"  class="se_landing">
+  <option class="se_landing_drpdwn"  value={{f}} *ngFor="let f of noOfFloors">{{f}}</option>
+</select>
+<button (click)=requestInsideElevator()>Go to Selected Floor</button>
+</div>
+
+<div style="height:50px"></div>
+
+<div style="text-align:left">
+  <h2>
+  Floor Request for Elevator
+
+  </h2>
+</div>
+<div>
+<label>From Floor:</label>
+<select [(ngModel)]="tofloor"  class="se_landing">
+  <option class="se_landing_drpdwn"  value={{f}} *ngFor="let f of noOfFloors">{{f}}</option>
+</select>
+<button  type="button"  (click)="requestElevator ('DOWN')"> DOWN </button>
+<button  type="button"  (click)="requestElevator ('UP')"> UP </button>
+</div>
+
+

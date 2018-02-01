@@ -1,0 +1,4 @@
+com\tingco\codechallenge\elevator\api\ElevatorControllerTest.class
+com\tingco\codechallenge\elevator\api\ElevatorTest.class
+com\tingco\codechallenge\elevator\resources\ElevatorControllerEndPointsTest.class
+com\tingco\codechallenge\elevator\IntegrationTest.class

@@ -1,0 +1,17 @@
+.se_landing_drpdwn{
+    height: 1.857em;
+    background-color: #ffffff;
+}
+.se_landing_drpdwn:hover{
+    background-color: #243946;
+}
+
+.se_landing {
+    width: 17.5em;
+    height: 1.98em;
+    font-size: 11px;
+    font-family: 'Helvetica';
+    font-weight: 400;
+    margin-left: 1.2em;
+    text-align: center;
+}

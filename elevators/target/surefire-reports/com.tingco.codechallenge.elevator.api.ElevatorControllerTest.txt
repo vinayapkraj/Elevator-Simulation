@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.tingco.codechallenge.elevator.api.ElevatorControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.456 sec - in com.tingco.codechallenge.elevator.api.ElevatorControllerTest
