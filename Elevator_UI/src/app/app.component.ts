@@ -9,7 +9,7 @@ import {MatSnackBar} from '@angular/material';
 })
 export class AppComponent {
   noOfElevators: number[] = [1, 2, 3, 4, 5, 6];
-  noOfFloors: number[]= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  noOfFloors: number[]= [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   title = 'app';
   selElevator: number;
   selFloor: number;
@@ -37,13 +37,15 @@ export class AppComponent {
   requestElevator(direction: string) {
       if (this.tofloor == null) {
         alert('Select Floor value cannot be blank');
-      } else {
-        this.elevatorService.requestElevators(this.tofloor, direction) .subscribe(
-        (data) => {this.responseRec =  data ,  alert(data); },
-        error => this. errorMsg = error );
+      } else if((this.tofloor==0 && direction==='DOWN') || (this.tofloor==10 && direction=='UP')){
+		      alert('Reached max / min floor. Select appropirate direction');
+	      }else {
+          this.elevatorService.requestElevators(this.tofloor, direction) .subscribe(
+          (data) => {this.responseRec =  data ,  alert(data); },
+          error => this. errorMsg = error );
 
-        this.tofloor = null;
-	      this.openSnackBar('Request Posted','OK');
+          this.tofloor = null;
+	        this.openSnackBar('Request Posted','OK');
         }
     }
 
